@@ -1,0 +1,23 @@
+﻿@model List<CountryViewModel>
+@{ 
+<div class="container">
+        <div>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <th style=" padding: 5px 10px; border: solid 1px black; text-align: center;">Ranking</th>
+                    <th style=" padding: 5px 10px; border: solid 1px black; text-align: center;">País</th>
+                    <th style=" padding: 5px 10px; border: solid 1px black; text-align: center;">Nº Casos</th>
+                </tr>
+                
+                @foreach (CountryViewModel country in Model)
+                {
+                    <tr>
+                        <td style=" padding: 5px 10px; border: solid 1px black; text-align: center;">@country.Position</td>
+                        <td style=" padding: 5px 10px; border: solid 1px black; text-align: center;">@country.Country</td>
+                        <td style=" padding: 5px 10px; border: solid 1px black; text-align: center;">@country.ActiveCases</td>
+                    </tr>
+                }
+            </table>
+        </div>
+</div>
+}
